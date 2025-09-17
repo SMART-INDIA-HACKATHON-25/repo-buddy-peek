@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { StatsCard } from "@/components/StatsCard";
 import { AchievementCard } from "@/components/AchievementCard";
 import { Button } from "@/components/ui/button";
+import { Calendar } from "@/components/ui/calendar";
 import { Trophy, Clock, CheckCircle, XCircle, ArrowRight } from "lucide-react";
 import { api, type Achievement } from "@/utils/api";
 
@@ -164,22 +165,19 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* This Week Section */}
+          {/* Personal Calendar */}
           <div className="p-6 rounded-xl bg-card/50 backdrop-blur-sm border border-border/50">
-            <h3 className="text-lg font-semibold mb-4">This Week</h3>
-            <div className="space-y-3">
-              <div className="flex items-center justify-between p-3 rounded-lg bg-accent/20">
-                <div>
-                  <p className="font-medium text-sm">Achievements Submitted</p>
-                  <p className="text-2xl font-bold text-primary">2</p>
-                </div>
+            <h3 className="text-lg font-semibold mb-4">Personal Calendar</h3>
+            <div className="space-y-4">
+              <div className="w-full">
+                <Calendar
+                  mode="single"
+                  className="rounded-md border border-border/50 bg-background/50 backdrop-blur-sm"
+                />
               </div>
-              <div className="flex items-center justify-between p-3 rounded-lg bg-accent/20">
-                <div>
-                  <p className="font-medium text-sm">Portfolio Views</p>
-                  <p className="text-2xl font-bold text-primary">24</p>
-                </div>
-              </div>
+              <Button size="sm" className="w-full">
+                Add Personal Event
+              </Button>
             </div>
           </div>
         </div>

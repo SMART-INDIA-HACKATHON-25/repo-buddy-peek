@@ -13,8 +13,7 @@ import Dashboard from "./pages/Dashboard";
 import UploadAchievement from "./pages/UploadAchievement";
 import MyAchievements from "./pages/MyAchievements";
 import Portfolio from "./pages/Portfolio";
-import FacultyApproval from "./pages/FacultyApproval";
-import AdminReports from "./pages/AdminReports";
+import Events from "./pages/Events";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -35,8 +34,7 @@ const App = () => (
                 <Route path="/upload" element={<UploadAchievement />} />
                 <Route path="/achievements" element={<MyAchievements />} />
                 <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/faculty" element={<FacultyApproval />} />
-                <Route path="/reports" element={<AdminReports />} />
+                <Route path="/events" element={<Events />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Routes>
