@@ -4,8 +4,7 @@ import {
   Upload, 
   Trophy, 
   User, 
-  Users, 
-  FileBarChart, 
+  Calendar, 
   GraduationCap 
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -38,7 +37,7 @@ const navigationItems = [
   {
     title: "Upcoming Events",
     href: "/events",
-    icon: Users,
+    icon: Calendar,
     roles: ["student"]
   }
 ];
