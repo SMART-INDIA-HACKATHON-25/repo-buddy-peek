@@ -18,31 +18,33 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <ThemeProvider defaultTheme="system" storageKey="ui-theme">
-      <TooltipProvider>
-        <AnimatedBackground className="min-h-screen">
-          <Toaster />
-          <Sonner />
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider defaultTheme="system" storageKey="ui-theme">
+        <TooltipProvider>
           <BrowserRouter>
-            <Routes>
-              <Route path="/login" element={<Login />} />
-              <Route path="/" element={<Navigate to="/dashboard" replace />} />
-              <Route element={<AppLayout />}>
-                <Route path="/dashboard" element={<Dashboard />} />
-                <Route path="/upload" element={<UploadAchievement />} />
-                <Route path="/achievements" element={<MyAchievements />} />
-                <Route path="/portfolio" element={<Portfolio />} />
-                <Route path="/events" element={<Events />} />
-              </Route>
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <AnimatedBackground className="min-h-screen">
+              <Routes>
+                <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Navigate to="/dashboard" replace />} />
+                <Route element={<AppLayout />}>
+                  <Route path="/dashboard" element={<Dashboard />} />
+                  <Route path="/upload" element={<UploadAchievement />} />
+                  <Route path="/achievements" element={<MyAchievements />} />
+                  <Route path="/portfolio" element={<Portfolio />} />
+                  <Route path="/events" element={<Events />} />
+                </Route>
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </AnimatedBackground>
+            <Toaster />
+            <Sonner />
           </BrowserRouter>
-        </AnimatedBackground>
-      </TooltipProvider>
-    </ThemeProvider>
-  </QueryClientProvider>
-);
+        </TooltipProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
+  );
+}
 
 export default App;
