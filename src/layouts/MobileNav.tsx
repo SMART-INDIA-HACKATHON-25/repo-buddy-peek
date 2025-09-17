@@ -15,7 +15,7 @@ const navigationItems = [
     title: "Dashboard",
     href: "/dashboard",
     icon: LayoutDashboard,
-    roles: ["student", "faculty", "admin"]
+    roles: ["student"]
   },
   {
     title: "Upload Achievement",
@@ -36,16 +36,10 @@ const navigationItems = [
     roles: ["student"]
   },
   {
-    title: "Faculty Approval",
-    href: "/faculty",
-    icon: GraduationCap,
-    roles: ["faculty", "admin"]
-  },
-  {
-    title: "Admin Reports",
-    href: "/reports",
-    icon: FileBarChart,
-    roles: ["admin"]
+    title: "Upcoming Events",
+    href: "/events",
+    icon: Users,
+    roles: ["student"]
   }
 ];
 
